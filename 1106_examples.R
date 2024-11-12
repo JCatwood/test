@@ -1,3 +1,10 @@
+# When writing codes, please keep the following in mind:
+# - Easy to read, including organization, variable naming, documentation
+# - Try to use existing codes/packages, also for efficiency, 
+#   try to reduce loops in R
+# - Organize your codes well in Github and reuse them in the future. 
+#   Also this is good for reproducing your results
+
 cond_corr <- function(j,c_i) { # corr( y_n, y_j | y_c(i) )
   ind_set <- c(j, n)
   cond_covmat <- covmat[ind_set, ind_set] - covmat[ind_set, c_i] %*% 
